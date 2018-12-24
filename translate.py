@@ -1,19 +1,21 @@
-var phrases1 = new Array();
-var phrases2 = new Array();
-var words1 = new Array();
-var words2 = new Array();
-var intraword1 = new Array();
-var intraword2 = new Array();
-var prefixes1 = new Array();
-var prefixes2 = new Array();
-var suffixes1 = new Array();
-var suffixes2 = new Array();
-var regex1 = new Array();
-var regex2 = new Array();
-var rev_regex1 = new Array();
-var rev_regex2 = new Array();
-var ordering1 = new Array();
-var ordering2 = new Array();
+var phrases1 = []
+var phrases2 = []
+var words1 = ["me","love","fuck"]
+var words2 = ["me","wuv","nnya"]
+var intraword1 = ["ll","l","r"]
+var intraword2 = ["ww","w","w"]
+var prefixes1 = ["l","r","m"]
+var prefixes2 = ["w","w","mw"]
+var suffixes1 = ["ll","er","l","r","!","?"][
+var suffixes2 = ["ww","ah","w","w","!!","??"]
+var regex1 = "\/[!]$\/g\n\/[?.]$\/g"
+var regex2 = "$' OwO\n$' UwU\n"
+var rev_regex1 = []
+var rev_regex2 = []
+var ordering1 = []
+var ordering2 = []
+ 
+
 function numRules() {
     return phrases1.length + phrases2.length + words1.length + words2.length + intraword1.length + intraword2.length + prefixes1.length + prefixes2.length + suffixes1.length + suffixes2.length + regex1.length + regex2.length + rev_regex1.length + rev_regex2.length + ordering1.length + ordering2.length;
 }
@@ -115,38 +117,4 @@ function translate(text, direction) {
 }
 
 
-#usage
-var jsonData = {
-                    "phrases1": "",
-                    "phrases2": "",
-                    "words1": "me\nlove\nfuck",
-                    "words2": "me\nwuv\nnya",
-                    "intraword1": "ll\nl\nr",
-                    "intraword2": "ww\nw\nw",
-                    "prefixes1": "l\nr\nm",
-                    "prefixes2": "w\nw\nmw",
-                    "suffixes1": "ll\ner\nl\nr\n!\n?",
-                    "suffixes2": "ww\nah\nw\nw\n!!\n??",
-                    "regex1": "\/[!]$\/g\n\/[?.]$\/g",
-                    "regex2": "$' OwO\n$' UwU\n",
-                    "rev_regex1": "",
-                    "rev_regex2": "",
-                    "ordering1": "",
-                    "ordering2": ""
-                };
-                phrases1 = jsonData.phrases1.split("\n");
-                phrases2 = jsonData.phrases2.split("\n");
-                words1 = jsonData.words1.split("\n");
-                words2 = jsonData.words2.split("\n");
-                intraword1 = jsonData.intraword1.split("\n");
-                intraword2 = jsonData.intraword2.split("\n");
-                prefixes1 = jsonData.prefixes1.split("\n");
-                prefixes2 = jsonData.prefixes2.split("\n");
-                suffixes1 = jsonData.suffixes1.split("\n");
-                suffixes2 = jsonData.suffixes2.split("\n");
-                regex1 = jsonData.regex1.split("\n");
-                regex2 = jsonData.regex2.split("\n");
-                rev_regex1 = jsonData.rev_regex1.split("\n");
-                rev_regex2 = jsonData.rev_regex2.split("\n");
-                ordering1 = jsonData.ordering1.split("\n");
-                ordering2 = jsonData.ordering2.split("\n");
+
